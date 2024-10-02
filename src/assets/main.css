@@ -1,0 +1,13 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+html,
+body {
+  @apply font-['Roboto'] font-normal;
+}
+h1 {
+  @apply text-[40px] text-white leading-[46.88px] font-extrabold text-center uppercase mb-3.5;
+}
+h2 {
+  @apply text-white text-center text-base font-normal leading-[18.75px] uppercase relative mb-2.5;
+}
