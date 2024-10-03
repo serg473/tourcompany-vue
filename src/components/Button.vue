@@ -12,6 +12,6 @@
 </template>
 <style scoped lang="postcss">
 button.button-default {
-    @apply rounded-[30px] bg-[#EC1C24] py-[11px] text-base uppercase leading-[18.75px] text-white flex justify-center items-baseline gap-2 cursor-pointer
+    @apply w-full h-10 rounded-[30px] bg-[#EC1C24] py-[11px] text-base uppercase leading-[18.75px] text-white flex justify-center items-baseline gap-2 cursor-pointer
 }
 </style>

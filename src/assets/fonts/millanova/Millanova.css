@@ -1,0 +1,8 @@
+@font-face {
+  font-family: "Millanova";
+  src: local("Millanova"), local("Millanova-Regular"),
+    url("./Millanova.otf") format("otf"),
+    url("./Millanova.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
