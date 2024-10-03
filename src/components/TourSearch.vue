@@ -1,4 +1,5 @@
 <script setup>
+import Button from '@/components/Button.vue'
 const onSubmit = () => {
     console.log('Click!')
 }
@@ -29,7 +30,7 @@ const onSubmit = () => {
                 </div>
             </div>
             <div>
-                <button>Подобрать</button>
+                <Button>Подобрать</Button>
             </div>
         </form>
     </div>
