@@ -2,7 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 html,
-body {
+body { 
   @apply font-['Roboto'] font-normal;
 }
 h1 {
