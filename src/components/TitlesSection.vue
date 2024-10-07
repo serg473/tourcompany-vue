@@ -1,6 +1,6 @@
 <template>
-    <div class="flex flex-col">
-        <h3>
+    <div class="flex flex-col items-center relative">
+        <h3 class="absolute top-[-10px]">
             <slot name="named-section"></slot>
         </h3>
         <h4>
