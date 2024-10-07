@@ -19,8 +19,7 @@ onUnmounted(() => {
 
 <template>
   <section class="bg-[url('../assets/img/travel-mob.png')] bg-no-repeat bg-cover p-[56px_0px_80px_0px]">
-    <div
-      class="container mb-11 flex flex-col items-center min-[360px]:max-w-[928px] min-[1024px]:max-w-[1120px] relative">
+    <div class="container mb-11 flex flex-col items-center relative">
       <h1>Путешествия мечты</h1>
       <h2>Выбери свою</h2>
       <div class="mb-[43px]">
@@ -30,7 +29,7 @@ onUnmounted(() => {
     </div>
   </section>
   <section class="pt-20 pb-[80px] bg-white text-center">
-    <div class="container pr-0 min-[480px]:max-w-[928px] min-[1024px]:max-w-[1120px]">
+    <div class="container pr-0">
       <TitlesSection>
         <template #named-section>Tours</template>
         <template #title>Горящие туры</template>
@@ -80,8 +79,8 @@ onUnmounted(() => {
       <template #subtitle>уют и роскошь в лучших отелях мира</template>
     </TitlesSection>
     <div v-if="width < 480">
-      <div class="flex flex-col" v-for="tourItem in tourStore.toursData" :key="tourItem.id">
-        <img :src="tourItem.preview" alt="">
+      <div class="flex flex-col" v-for="tourItem in tourStore.favouriteTour" :key="tourItem.id">
+        <img :src="getImagePath(tourItem.preview)" :alt="tourItem.name">
       </div>
     </div>
   </section>

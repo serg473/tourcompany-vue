@@ -11,3 +11,6 @@ h1 {
 h2 {
   @apply text-white text-center text-base font-normal leading-[18.75px] uppercase relative mb-2.5;
 }
+.container {
+  @apply mb-11 min-[480px]:max-w-[928px] min-[1024px]:max-w-[1120px] relative;
+}
