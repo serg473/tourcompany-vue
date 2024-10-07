@@ -1,0 +1,8 @@
+@font-face {
+  font-family: "Chandra";
+  src: local("Chandra"), local("Chandra"),
+    url("./Chandra.otf") format("otf"),
+    url("./Chandra.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
