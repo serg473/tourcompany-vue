@@ -17,11 +17,11 @@ const handlerSubmit = () => {
             <div class="form">
                 <div class="field-form">
                     <label for="name"></label>
-                    <input placeholder="Имя" id="name" name="name" type="text" />
+                    <input class="placeholder-[#bdbdbd]" placeholder=" Имя" id="name" name="name" type="text" />
                 </div>
                 <div class="field-form">
                     <label for="phone"></label>
-                    <input placeholder="Телефон" name="phone" id="phone" type="tel" />
+                    <input class="placeholder-[#bdbdbd]" placeholder="Телефон" name="phone" id="phone" type="tel" />
                 </div>
             </div>
             <div class="mt-6">
@@ -38,7 +38,7 @@ const handlerSubmit = () => {
         @apply flex flex-col;
 
         input {
-            @apply border-b border-[#848484] pb-[5px] placeholder:leading-[14.06px] placeholder:text-xs placeholder:text-[#bdbdbd];
+            @apply border-b border-[#848484] pb-[5px] text-xs leading-[14.06px];
         }
     }
 }

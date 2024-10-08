@@ -2,10 +2,10 @@
 import CardsSlider from '@/components/CardsSlider.vue';
 import TitlesSection from '@/components/TitlesSection.vue';
 import TourSearch from '@/components/TourSearch.vue';
-import { getImagePath } from '@/utils';
-import { useTourStore } from '@/stores/tours';
 import ButtonMore from '@/components/ButtonMore.vue';
 import FormFeedback from '@/components/FormFeedback.vue';
+import { getImagePath } from '@/utils';
+import { useTourStore } from '@/stores/tours';
 const tourStore = useTourStore();
 </script>
 
@@ -106,6 +106,13 @@ const tourStore = useTourStore();
   </section>
   <section class="p-[30px] bg-[url('../assets/img/valeria-andersson.webp')] bg-no-repeat bg-cover">
     <FormFeedback />
+  </section>
+  <section class="p-[75px_0_80px_0] text-center">
+    <TitlesSection>
+      <template #named-section>Reviews</template>
+      <template #title>отзывы</template>
+      <template #subtitle>Впечатления наших путешественников</template>
+    </TitlesSection>
   </section>
 </template>
 
