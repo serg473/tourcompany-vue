@@ -19,7 +19,7 @@ const tourStore = useTourStore();
       </div>
       <TourSearch />
     </div>
-  </section>
+  </section>                         
   <section class="pt-20 pb-[80px] bg-white text-center">
     <div class="container pr-0">
       <TitlesSection>
