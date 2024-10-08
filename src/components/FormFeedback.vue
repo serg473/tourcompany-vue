@@ -33,7 +33,6 @@ const handlerSubmit = () => {
 <style lang="postcss">
 .form {
     @apply flex flex-col gap-[11px] mt-6;
-
     .field-form {
         @apply flex flex-col;
 
