@@ -107,18 +107,36 @@ const tourStore = useTourStore();
   <section class="p-[30px] bg-[url('../assets/img/valeria-andersson.webp')] bg-no-repeat bg-cover">
     <FormFeedback />
   </section>
-  <section class="p-[75px_0_80px_0] text-center">
-    <TitlesSection>
-      <template #named-section>Reviews</template>
-      <template #title>отзывы</template>
-      <template #subtitle>Впечатления наших путешественников</template>
-    </TitlesSection>
-    <CardsSlider>
-      <template #default="{ sliderData }">
-        
-      </template>
-    </CardsSlider>
-  </section>
+  <div class="container pr-0">
+    <section class="p-[75px_0_80px_0] text-center">
+      <TitlesSection>
+        <template #named-section>Reviews</template>
+        <template #title>отзывы</template>
+        <template #subtitle>Впечатления наших путешественников</template>
+      </TitlesSection>
+      <CardsSlider :sliderData="tourStore.comments">
+        <template #default="{ sliderData }">
+          <div class="p-[27px_24px_32px_24px] flex flex-col items-center bg-[#F8F8F8] rounded-[30px]">
+            <img class="rounded-full" :src="getImagePath(sliderData.avatar)" :alt="sliderData.from">
+            <div class="mt-[18px] flex flex-col items-center">
+              <div class="flex items-center gap-[6px] mb-[9px]">
+                <img v-for="item in 5" :key="item" src="../assets/img/StarComments.svg" :alt="`RaitingHotel_${item}`">
+              </div>
+              <div class="text-[#6B6B6B] text-xs font-light leading-[14.06px]">
+                <div class="mb-[5px]">{{ sliderData.from }}</div>
+                <div class="mb-[20px]">{{ sliderData.where }}</div>
+                <p class="text-base leading-[22px]">{{ sliderData.description }}</p>
+              </div>
+            </div>
+          </div>
+        </template>
+      </CardsSlider>
+    </section>
+  </div>
 </template>
 
-<style lang="postcss"></style>
+<style lang="postcss">
+div.swiper-scrollbar.swiper-scrollbar-horizontal {
+  @apply mt-11 static;
+}
+</style>
