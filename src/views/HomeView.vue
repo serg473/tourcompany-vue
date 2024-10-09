@@ -136,10 +136,54 @@ const tourStore = useTourStore();
       <ButtonMore class="mt-8">Больше новостей</ButtonMore>
     </div>
   </section>
+  <section class="p-[76px_0_60px_0]">
+    <div class="container about">
+      <TitlesSection class="text-center">
+        <template #named-section>We</template>
+        <template #title>о нас</template>
+        <template #subtitle>Вдохновляем мир на путешествия</template>
+      </TitlesSection>
+      <div>
+        <p class="mt-[33px] font-light text-base leading-26px text-[#212121]"> <span class="dropcap">Мы</span> — команда
+          профессионалов,
+          влюбленных
+          в
+          искусство
+          путешествий. Наша история началась с
+          мечты о том, чтобы
+          сделать
+          каждое путешествие незабываемым, каждое приключение уникальным.
+          Наша миссия — сделать путешествия доступными и незабываемыми. Мы предлагаем вам не просто туры, а волшебные
+          истории,
+          которые будут жить в вашем сердце навсегда. Независимо от того, ищете ли вы релакс на пляже, культурные изыски
+          или
+          экстремальные приключения, мы создадим для вас оптимальное путешествие, подстроенное под ваши уникальные
+          желания.
+          <img class="my-8" src="../assets/img/Mask group (1)-min.jpg" alt="About_Picture">
+          Мы гордимся нашей командой опытных специалистов, каждый из которых разделяет страсть к туризму и стремление
+          сделать ваше путешествие незабываемым. Мы внимательно следим за последними тенденциями в индустрии, чтобы
+          предложить вам только лучшие и самые актуальные варианты.
+          <span>Присоединяйтесь к нам в этом захватывающем путешествии! Мы готовы подарить вам моменты радости,
+            вдохновения и удивления в каждом уголке нашего удивительного мира.</span>
+          <img class="mt-8" src="../assets/img/Mask group-min.jpg" alt="About_Picture">
+        </p>
+      </div>
+    </div>
+  </section>
 </template>
 
 <style lang="postcss">
 div.swiper-scrollbar.swiper-scrollbar-horizontal {
   @apply mt-11 static;
+}
+
+.container.about {
+  h5 {
+    @apply mb-0;
+  }
+
+  .dropcap {
+    @apply text-[54px] leading-[61.67px] float-left uppercase;
+  }
 }
 </style>
