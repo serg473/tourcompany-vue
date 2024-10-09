@@ -6,6 +6,7 @@ import ButtonMore from '@/components/ButtonMore.vue';
 import FormFeedback from '@/components/FormFeedback.vue';
 import { getImagePath } from '@/utils';
 import { useTourStore } from '@/stores/tours';
+import HotelCardsList from '@/components/HotelCardsList.vue';
 const tourStore = useTourStore();
 </script>
 
@@ -29,37 +30,7 @@ const tourStore = useTourStore();
       </TitlesSection>
       <CardsSlider :sliderData="tourStore.toursData">
         <template #default="{ sliderData }">
-          <img class="rounded-[30px]" :src="getImagePath(sliderData?.preview)"
-            :alt="`${sliderData?.country}-${sliderData?.city}`">
-          <div class="absolute w-full h-full inset-0 pl-5 py-5">
-            <div class="flex gap-[10px] font-light text-sm leading-[16.41px] text-[#FFFFFF]">
-              <div class="border border-[#ffffff] rounded-[30px] p-[4px_10px_3px_10px]">
-                <span>{{ sliderData?.term }} дней</span>
-              </div>
-              <div class="border border-[#ffffff] rounded-[30px] p-[4px_10px_3px_10px]">
-                от {{ sliderData?.price }} ₽
-              </div>
-            </div>
-            <div class="flex flex-col items-start mt-[219px] text-white font-medium text-sm leading-[16.41px]">
-              <div class="flex gap-5  uppercase">
-                <strong
-                  class="relative after:content-[''] after:absolute after:size-[5px] after:bg-white after:top-[5px] after:right-[-12px] after:rounded-full">{{
-                    sliderData?.country }}</strong>
-                <strong>{{ sliderData?.city }}</strong>
-              </div>
-              <span class="my-[6px]">{{ sliderData?.date }}</span>
-              <div class="flex gap-3">
-                <span class="font-light inline-block">узнать подробнее</span>
-                <svg width="42" height="16" viewBox="0 0 42 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path
-                    d="M1 7.5C0.723858 7.5 0.5 7.72386 0.5 8C0.5 8.27614 0.723858 8.5 1 8.5L1 7.5ZM31.3333 8C31.3333 9.47276 32.5272 10.6667 34 10.6667C35.4728 10.6667 36.6667 9.47276 36.6667 8C36.6667 6.52724 35.4728 5.33334 34 5.33334C32.5272 5.33334 31.3333 6.52724 31.3333 8ZM1 8.5L34 8.5L34 7.5L1 7.5L1 8.5Z"
-                    fill="white" />
-                  <circle cx="34" cy="8" r="7.5" transform="rotate(-90 34 8)" stroke="white" />
-                </svg>
-
-              </div>
-            </div>
-          </div>
+          <HotelCardsList :cardsList="sliderData" />
         </template>
       </CardsSlider>
     </div>
@@ -107,8 +78,9 @@ const tourStore = useTourStore();
   <section class="p-[30px] bg-[url('../assets/img/valeria-andersson.webp')] bg-no-repeat bg-cover">
     <FormFeedback />
   </section>
-  <div class="container pr-0">
-    <section class="p-[75px_0_80px_0] text-center">
+
+  <section class="p-[75px_0_80px_0] text-center">
+    <div class="container pr-0">
       <TitlesSection>
         <template #named-section>Reviews</template>
         <template #title>отзывы</template>
@@ -131,8 +103,39 @@ const tourStore = useTourStore();
           </div>
         </template>
       </CardsSlider>
-    </section>
-  </div>
+    </div>
+  </section>
+  <section class="p-[75px_0_80px_0] bg-[#f8f8f8]">
+    <div class="container">
+      <TitlesSection class="text-center">
+        <template #named-section>News</template>
+        <template #title>Новости</template>
+        <template #subtitle>события в мире туризма</template>
+      </TitlesSection>
+      <div class="mt-[31px] flex flex-col gap-3">
+        <div class="relative" v-for="tourItem in tourStore.news" :key="tourItem.id">
+          <img class="rounded-[30px]" :src="getImagePath(tourItem.preview)" :alt="tourItem.name">
+          <div class="p-[31px_40px_30px_35px] flex flex-col justify-between absolute inset-0">
+            <div class="self-end flex flex-col relative">
+            </div>
+            <div class="text-white justify-end flex flex-col gap-3">
+              <h3 class="font-medium text-base leading-[18.75px] uppercase">{{ tourItem.title }}</h3>
+              <div class="flex items-center gap-3">
+                <button class="text-sm leading-[14.61px] font-light">читать</button>
+                <svg width="42" height="16" viewBox="0 0 42 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M1 7.5C0.723858 7.5 0.5 7.72386 0.5 8C0.5 8.27614 0.723858 8.5 1 8.5L1 7.5ZM31.3333 8C31.3333 9.47276 32.5272 10.6667 34 10.6667C35.4728 10.6667 36.6667 9.47276 36.6667 8C36.6667 6.52724 35.4728 5.33334 34 5.33334C32.5272 5.33334 31.3333 6.52724 31.3333 8ZM1 8.5L34 8.5L34 7.5L1 7.5L1 8.5Z"
+                    fill="white" />
+                  <circle cx="34" cy="8" r="7.5" transform="rotate(-90 34 8)" stroke="white" />
+                </svg>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <ButtonMore class="mt-8">Больше новостей</ButtonMore>
+    </div>
+  </section>
 </template>
 
 <style lang="postcss">
