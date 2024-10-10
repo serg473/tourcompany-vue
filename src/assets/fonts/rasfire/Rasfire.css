@@ -1,0 +1,10 @@
+@font-face {
+  font-family: "Rasfire";
+  src: local("Rasfire"), local("Rasfire-Regular"),
+    url("./Rasfire-Regular.eot?#iefix") format("embedded-opentype"),
+    url("./Rasfire-Regular.woff2") format("woff2"),
+    url("./Rasfire-Regular.woff") format("woff"),
+    url("./Rasfire-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}

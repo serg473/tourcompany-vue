@@ -11,4 +11,5 @@ import { RouterView } from 'vue-router'
 <style scoped>
 @import url('./assets/fonts/Roboto/stylesheet.css');
 @import url('./assets//fonts/Chandra/Chandra.css');
+@import url('./assets/fonts/rasfire/Rasfire.css')
 </style>

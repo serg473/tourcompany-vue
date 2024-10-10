@@ -183,7 +183,7 @@ div.swiper-scrollbar.swiper-scrollbar-horizontal {
   }
 
   .dropcap {
-    @apply text-[54px] leading-[61.67px] float-left uppercase;
+    @apply font-['Rasfire'] text-[54px] leading-[61.67px] float-left uppercase;
   }
 }
 </style>
