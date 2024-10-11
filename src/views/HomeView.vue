@@ -203,6 +203,14 @@ const tourStore = useTourStore();
       </div>
     </div>
   </section>
+  <section class="py-[30px] bg-[url('../assets/img/feedback_bg.jpg')] bg-no-repeat bg-cover">
+    <div class="container">
+      <FormFeedback>
+        <template #title>МЫ ПОМОЖЕМ СОЗДАТЬ <i>ваше</i> ПУТЕШЕСТВИЕ</template>
+        <template #description>Оставьте заявку на подбор идеального путешествия</template>
+      </FormFeedback>
+    </div>
+  </section>
 </template>
 
 <style lang="postcss">

@@ -7,11 +7,15 @@ const handlerSubmit = () => {
 <template>
     <div class="py-[52px] bg-white rounded-[30px] px-10">
         <div class="text-[#1c1c1c] text-center">
-            <h4 class="text-[23px] text-center leading-[26.95px] mb-4 uppercase">не определились с
-                <i>выбором</i>?
+            <h4 class="text-[23px] text-center leading-[26.95px] mb-4 uppercase">
+                <slot name="title">не определились с
+                    <i>выбором</i>?
+                </slot>
             </h4>
-            <p class="font-light text-base leading-[18.75px]">Оставьте свой номер и наш специалист поможет вам с
-                подбором тура</p>
+            <p class="font-light text-base leading-[18.75px]">
+                <slot name="description">Оставьте свой номер и наш специалист поможет вам с
+                    подбором тура</slot>
+            </p>
         </div>
         <form @submit.prevent="handlerSubmit">
             <div class="form">
