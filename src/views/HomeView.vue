@@ -203,7 +203,7 @@ const tourStore = useTourStore();
       </div>
     </div>
   </section>
-  <section class="py-[30px] bg-[url('../assets/img/feedback_bg.jpg')] bg-no-repeat bg-cover">
+  <section class="feedback">
     <div class="container">
       <FormFeedback>
         <template #title>МЫ ПОМОЖЕМ СОЗДАТЬ <i>ваше</i> ПУТЕШЕСТВИЕ</template>
@@ -214,6 +214,31 @@ const tourStore = useTourStore();
 </template>
 
 <style lang="postcss">
+.feedback {
+  @apply py-[30px] bg-[url('../assets/img/feedback_bg.jpg')] bg-no-repeat bg-cover relative;
+
+  &::before,
+  &::after {
+    content: '';
+    display: block;
+    position: absolute;
+    width: 14px;
+    height: 15px;
+  }
+
+  &::before {
+    right: 100%;
+    bottom: 0;
+    background-image: radial-gradient(circle at 0 0, transparent 14px, red 15px);
+  }
+
+  &::after {
+    left: 100%;
+    bottom: 0;
+    background-image: radial-gradient(circle at 100% 0, transparent 14px, red 15px);
+  }
+}
+
 div.swiper-scrollbar.swiper-scrollbar-horizontal {
   @apply mt-11 static;
 }
