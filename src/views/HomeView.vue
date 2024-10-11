@@ -170,6 +170,39 @@ const tourStore = useTourStore();
       </div>
     </div>
   </section>
+  <section class="pb-20 text-center">
+    <div class="container">
+      <h4 class="title__contacts">
+        Связаться
+        с нами</h4>
+      <div class="information">
+        <div class="information__company">
+          <img src="../assets/img/facebook.svg" alt="Facebook" />
+          <img src="../assets/img/instagram.svg" alt="Instagram" />
+          <img src="../assets/img/telegram.svg" alt="Telegram" />
+          <img src="../assets/img/whatsapp.svg" alt="WhatsApp" />
+          <img src="../assets/img/ok.svg" alt="Ok" />
+          <img src="../assets/img/vk.svg" alt="Vk" />
+        </div>
+        <div class="divide my-8"></div>
+        <address class="flex flex-col items-center justify-center">
+          <h4 class="title__contacts reset">КОНТАКТЫ</h4>
+          <div class=" font-light text-base leading-[26px] uppercase">
+            <div class="mb-[6px] flex flex-col gap-[2px]">
+              <a class="no-italic" href="tel:+8(495)626-26-96">+8(495)626-26-96 </a>
+              <a class="no-italic" href="tel:+8(925)826-26-96">+8(925)826-26-96</a>
+            </div>
+            <a href="mailto:anextourchertanovo@gmail.com">anextourchertanovo@gmail.com</a>
+            <div class="divide m-[32px_auto_32px_auto]"></div>
+            <div class="border-b pb-8 border-[#D4D4D4]">
+              <h4 class="title__contacts reset">Адрес</h4>
+              <span>Москва, Россошанский проезд, дом 3, (1‑й этаж)</span>
+            </div>
+          </div>
+        </address>
+      </div>
+    </div>
+  </section>
 </template>
 
 <style lang="postcss">
@@ -184,6 +217,26 @@ div.swiper-scrollbar.swiper-scrollbar-horizontal {
 
   .dropcap {
     @apply font-['Rasfire'] text-[54px] leading-[61.67px] float-left uppercase;
+  }
+}
+
+.title__contacts {
+  @apply pt-8 border-t border-[#D4D4D4] font-medium text-2xl leading-[28.13px] text-[#1C1C1C] uppercase;
+
+  &.reset {
+    @apply border-none pt-0 not-italic mb-5;
+  }
+}
+
+.information {
+  @apply flex flex-col items-center justify-center;
+
+  .information__company {
+    @apply flex w-[126px] flex-wrap gap-[15px] mt-5;
+  }
+
+  .divide {
+    @apply w-[63px] h-[1px] bg-[#d4d4d4];
   }
 }
 </style>
